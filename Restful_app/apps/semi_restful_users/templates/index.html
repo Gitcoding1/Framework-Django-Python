@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Restful Users | Home </title>
+</head>
+<body>
+    <h2>Users</h2>
+    <table>
+        <thead>
+            <td>Id</td>
+            <td>Full Name</td>
+            <td>Email</td>
+            <td>Created at</td>
+            <td>Actions</td>
+        </thead>
+        
+        <!-- connect to the database to display all users -->
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.created_at}}</td>
+                <td> <a href="{% url 'show_user' userid=user.id%}">Show</a> <a href="{% url 'edit_user' userid=user.id %}">Edit</a> <a href="{% url 'delete_user' userid=user.id %}">Delete</a></td>
+            </tr>
+            {% endfor %}
+
+    </table>
+    <br><br>
+    <a href="users/new">Add a new user</a>
+   
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'survey_form/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Survey Form</title>
+
+</head>
+<body>
+        <h1>Survey Form</h1>
+        <form action="process" method="POST">
+            {% csrf_token %}
+            <label>Your Name:
+            <br>
+            <input type="text" name='name'></label>
+            <br>
+            Location:
+            <br>
+           <select name="location">
+               <option value="dallas">Dallas</option>
+               <option value="california">California</option>
+               <option value="new york">New York</option>
+               <option value="Seattle"> Seattle</option>
+               <option value="san jose">San Jose</option>
+           </select>
+            <br>
+             What is your favorite Language:
+            <br>
+           <select name='language'>
+               <option value="hyper text markup language">Hyper Text Markup Language</option>
+               <option value="css">Cascading Style Sheets</option>
+               <option value="javascript">Javascript</option>
+               <option value="jquery">jQuery</option>
+               <option value="python">Python</option>
+               <option value="angular">Angular</option>
+           </select>
+            <br>
+            What is your favorite Database Language:
+            <br>
+            <select name="database">
+                <option value="SQL">Structured Query Language</option>
+                <option value="nosql">Not Only Stuctured Query Language</option>
+                <option value="postgres sql">Postgres SQL</option>
+                <option value="sqlite">SQLite</option>
+                <option value="mongodb">MongoDB</option>
+            </select>
+            <br>
+            Comment:
+            <br>
+            <textarea name="comment" cols="50" rows="10"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    
+</body>
+</html>

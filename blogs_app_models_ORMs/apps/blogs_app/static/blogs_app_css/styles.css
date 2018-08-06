@@ -1,0 +1,41 @@
+body{
+    background-color:cadetblue;
+
+}
+.blogs{
+    width: 400px;
+    height: 300px;
+    border: 1px solid white;
+    display: inline-block;
+    overflow: scroll;
+}
+h1{
+    width: 200px;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+ul{
+    width:200px;
+    padding:10px;
+
+    
+}
+li{
+    list-style: none;
+    color: rgb(3, 2, 2);
+}
+p{
+    margin: 10px;
+    color:rgb(255, 255, 255);
+}
+
+.update{
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    display: inline-block;
+    vertical-align: top;
+    margin-left:50px;
+    padding: 5px;
+}

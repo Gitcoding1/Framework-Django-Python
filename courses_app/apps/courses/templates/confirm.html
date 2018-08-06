@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'confirm.css' %}">
+    <title>Confirm </title>
+</head>
+<body>
+    <div>
+        <h1>Are you sure you want to delete the following course?</h1>
+        <h4>Name: <span>{{course.name}}</span></h4>
+        <h4>Description: <span>{{course.description}}</span></h4>
+        <br><br>
+        <a href="{% url 'courses' %}" class="no_delete">No</a><a href="{% url 'destroy_course' courseid=course.id %}" class="delete">Yes! I do want to delete this</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    background-color: white;
+    padding: 20px;   
+}
+form{
+    width: 400px;
+    padding: 10px;
+    background-color:#bababa;
+    border:1px solid black;
+}
+p{
+    margin: 0px;
+    color:red;
+    width: 348px;
+}
+/* 
+.courses{
+    width: 400px;
+    height: 210px;
+    
+} */
+button{
+    width: 56px;
+    margin-left: 72px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

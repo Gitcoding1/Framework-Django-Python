@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'amadon/checkout.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+        <title>Successful checkout</title>
+        <h1>Thank you for your business!</h1>
+        {% if request.session.purchase %}
+            <h2>You Purchased</h2>
+            <p>{{ request.session.amount_of }} - {{request.session.purchase}} (s)</p>
+        {%endif%}
+        {% if request.session.last_trans%}
+        <h5>we charged you credit/debit card for ${{request.session.last_trans}}</h5>
+        {% else %}
+        <h5>Keep purchasing</h5>
+        {% endif%}
+
+        <h5>you have ordered {{ request.session.total_items }} item(s) and so far
+            you have spent ${{request.session.total}}
+        </h5>
+        <a href="/">Go Back</a>
+</body>
+</html>

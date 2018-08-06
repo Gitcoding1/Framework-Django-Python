@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'dojo_ninjas_css/styles.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+    <title>Dojo Ninjas </title>
+</head>
+<body>
+        <!--  -->
+        <!-- Dojos table -->
+        <!--  -->
+    <div class="container"> <!-- containter that has everything in it -->
+        <h2>Dojos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- we call the function inside the tabel body with for which makes the row and data for every dojo -->
+                {% for dojo in dojos %}
+                    <tr class="info">
+                        <td>{{dojo.name}}</td>
+                        <td>{{dojo.state}}</td>
+                        <td>{{dojo.city}}</td>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+        
+        <!--  -->
+        <!-- Ninjas table -->
+        <!--  -->
+        
+        <h2>Ninjas</h2>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Dojo Attending</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+    
+                    {% for ninja in ninjas %}
+                        <tr class="success">
+                            <td>{{ninja.first_name}}</td>
+                            <td>{{ninja.last_name}}</td>
+                            <td>{{ninja.dojo}}</td>
+                        </tr>
+                    {% endfor %}
+    
+                </tbody>
+            </table>
+    </div>
+
+</body>
+</html>

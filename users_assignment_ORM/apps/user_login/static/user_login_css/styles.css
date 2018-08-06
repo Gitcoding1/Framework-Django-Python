@@ -1,0 +1,31 @@
+body{
+    background-color:blue ;
+
+}
+h1{ 
+    color:white;
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+ul{
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+li{
+  list-style: none;
+  color:red;
+}
+h2{ 
+    background-color: lightslategray;
+    width:265px;
+    margin-left:auto;
+    margin-right:auto;
+}
+p{
+    color: lime;
+    width: auto;
+    margin-left: auto;
+    margin-right:auto;
+}

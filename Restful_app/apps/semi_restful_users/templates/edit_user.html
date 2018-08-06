@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edit_user.css' %}">
+    <title>Edit | {{user.first_name}}</title>
+</head>
+<body>
+    <h1> Edit User! {{ user.id }}</h1>
+    <!-- Form to edit a user with values of current user info .-->
+    <form action="/users/{{user.id}}/update" method="POST" >
+        {% csrf_token %} 
+        <label for="first_name">First Name</label>
+        <br>
+        <input type="text" name='first_name' value={{user.first_name}} >
+        <br><br>
+        <label for="last_name">Last name</label>
+        <br>
+        <input type="text" name='last_name' value={{user.last_name}}>
+        <br><br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" name='email' value={{user.email}} >
+        <br><br>
+        <button type="submit">UPDATE</button>
+    </form>
+    <br>
+
+     <a href="{% url 'show_user' userid=user.id%}">Show</a>|<a href="/users">Go back</a>
+   
+</body>
+</html>

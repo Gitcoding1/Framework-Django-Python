@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Likes | Books </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'likes_books/styles.css' %}" />
+</head>
+<body>
+    <h1>Likes And Books</h1>
+    
+    <h2>Users</h2>
+    <ol>
+        {% for user in users %}
+            <li>{{ user.first_name }} {{user.last_name }} - {{ user.email }}</li>
+        {% endfor %}
+    </ol>
+    
+    <hr>
+    
+    <h2> Books </h2>
+    <ol>
+        {% for book in books %}
+        <li>{{ book.name }} - Description: {{book.desc}} | Uploder: <p class="uploader">{{book.uploader.first_name}} {{book.uploader.last_name}} </p></li>
+        <p class="likes"> Likes: {%for name in book.likes.all%}
+                                    {{ name.first_name}}
+                                    {% endfor %} </p>
+        {% endfor %}
+    </ol>
+
+
+
+
+
+</body>
+</html>

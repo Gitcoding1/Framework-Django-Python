@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login_reg.css'%}">
+    <title> Login | Register </title>
+</head>
+<body>
+    <div class='div_login'>
+        <h1>Login</h1>
+        {% if form.errors %}
+        <p>Please correct the errors {{ form.errors|pluralize }} below.</p>
+        {% endif %}
+        <form action="" method="POST" id="form_login">
+            {% csrf_token %} 
+            {{ loginForm }}
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <div class='div_reg'>
+        <h1>Register</h1>
+        <form action="{% url 'register' %}" method="POST" id ="form_reg">
+            {% csrf_token %}
+            {{ registerForm }}
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    
+    
+</body>
+</html>

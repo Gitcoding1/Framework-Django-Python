@@ -1,0 +1,28 @@
+body{
+    padding: 20px;
+    background-color: lightcoral;
+}
+div{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+span{
+    font-weight: lighter;
+}
+a.no_delete{
+    color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 20px;
+    background-color: white;
+    text-decoration: none;
+}
+a.delete{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: red;
+    text-decoration: none;
+    color: black;
+
+}

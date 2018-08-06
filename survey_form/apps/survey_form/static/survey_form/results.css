@@ -1,0 +1,21 @@
+body{
+    background-color: lightgreen;
+    padding:20px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+}
+div{
+    display: block;
+    padding: 10px;
+    background-color: white;
+}
+
+h1{
+ display: inline;
+ margin: auto;
+}
+span{
+    font-weight: bold;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'show.css' %}">
+    <title>{{user.first_name}} | info</title>
+</head>
+<body>
+    <h2>User {{user.id}}</h2>
+    <h4>Full name: <span>{{user.first_name}} {{ user.last_name }} </span></h4>
+    <h4>Email: <span>{{user.email}}</span></h4>
+    <h4>Created at <span>{{user.created_at}}</span></h4>
+
+
+    <a href="{% url 'edit_user' userid=user.id %}">Edit</a> | <a href="{% url 'delete_user' userid=user.id %}">Delete</a>
+   
+</body>
+</html>

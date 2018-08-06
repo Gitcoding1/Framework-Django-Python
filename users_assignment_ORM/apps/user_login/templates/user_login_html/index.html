@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'user_login_css/styles.css' %}">
+    <title>Users</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    {% for user in users %}
+    <h2>{{ user.first_name }} {{ user.last_name }} - {{ user.age }}</h2>
+    <ul>
+        <p>{{ user.email_address }}</p>
+        <li>{{ user.created_at }}</li>
+    </ul>
+    <hr>
+    {% endfor %}
+</body>
+</html>

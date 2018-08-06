@@ -1,0 +1,9 @@
+body{
+    background-color: lightcoral
+}
+.uploader{
+ display: inline-block;
+}
+.likes{
+    color:yellow;
+}

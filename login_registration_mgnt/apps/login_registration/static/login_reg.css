@@ -1,0 +1,42 @@
+body{
+    background-color: #313299;
+}
+.div_login{
+    vertical-align: top;
+    border: 1px solid white;
+    width: 300px;
+    height: 215px;
+    display: inline-block;
+}
+#form_login{
+    width:280px;
+    height: 163px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.div_login h1, .div_reg h1{
+    text-align: center;
+    margin: 0px;
+}
+.div_reg{
+    vertical-align: top;
+    border: 1px solid white;
+    width: 315px;
+    height: 417px;
+    display: inline-block;
+}
+#form_reg{
+    width: 293px;
+    height: 369px;
+    margin-right: auto;
+    margin-left: auto;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+input{
+    text-align: left;
+    margin: 10px;
+}
